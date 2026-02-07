@@ -27,6 +27,7 @@ ul { list-style: none; }
     padding: 0 20px;
 }
 
+/* ================= HEADER & NAV ================= */
 header {
     background: var(--white);
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -68,10 +69,11 @@ header {
 }
 .btn-header:hover { background-color: #2c3e50; }
 
+/* ================= HERO DA HOME ================= */
 #hero {
     height: 70vh;
+    /* Certifique-se de ter a imagem 'office.jpg' na pasta */
     background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.7)), url('office.jpg');
-    
     background-size: cover;
     background-position: center;
     display: flex;
@@ -112,6 +114,7 @@ header {
     font-weight: 700;
     font-size: 1rem;
     display: inline-block;
+    cursor: pointer;
 }
 
 .btn-primary:hover, .btn-outline:hover {
@@ -121,6 +124,7 @@ header {
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
+/* ================= HOME: COMPARAÇÃO ================= */
 #comparison {
     padding: 80px 0;
     background-color: var(--white);
@@ -196,6 +200,7 @@ header {
 }
 .btn-outline-dark:hover { background-color: var(--primary-color); color: white; }
 
+/* ================= MARCAS (SLIDER) ================= */
 #brands {
     padding: 50px 0;
     background-color: var(--bg-light);
@@ -255,14 +260,11 @@ header {
 }
 
 @keyframes scroll {
-    0% { 
-        transform: translateX(0); 
-    }
-    100% { 
-        transform: translateX(-2000px); 
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-2000px); }
 }
 
+/* ================= TESTEMUNHOS ================= */
 #testemunho {
     padding: 80px 0;
     background-color: var(--white);
@@ -319,25 +321,14 @@ header {
     color: var(--text-light);
 }
 
-@media (max-width: 768px) {
-    .section-header h2 {
-        font-size: 2rem;
-    }
-    .grid-testemunho {
-        grid-template-columns: 1fr;
-    }
-}
-
-.container.footer-content {
-    padding: 20px 0;
-    text-align: center;
-}
-
-/* Cabeçalho da Página (Menor que a Hero da Home) */
+/* ================= PAGE HEADER (EQUIPAMENTOS) ================= */
+/* ATUALIZADO: Agora usa a imagem 'equipamento.jpg' */
 .page-header {
-    background-color: var(--primary-color);
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('equipamento.jpg');
+    background-size: cover;
+    background-position: center;
     color: var(--white);
-    padding: 80px 0 60px;
+    padding: 100px 0;
     text-align: center;
 }
 
@@ -354,7 +345,7 @@ header {
     font-weight: 300;
 }
 
-/* Seções de Produtos */
+/* ================= SEÇÕES DE PRODUTOS ================= */
 .product-section {
     padding: 100px 0;
     border-bottom: 1px solid #e2e8f0;
@@ -379,7 +370,6 @@ header {
     order: 1;
 }
 
-/* Tipografia e Elementos do Produto */
 .badge-category {
     display: inline-block;
     background-color: #64748b;
@@ -417,7 +407,6 @@ header {
     gap: 10px;
 }
 
-/* Caso não use FontAwesome, substitua o ícone por um caractere no HTML ou use este estilo: */
 .feature-list li i {
     color: var(--accent-color);
     margin-top: 4px;
@@ -445,7 +434,7 @@ header {
     max-width: 100%;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1); /* Sombra suave premium */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1); 
     transition: transform 0.4s ease;
 }
 
@@ -506,7 +495,7 @@ header {
     margin-right: auto;
 }
 
-/* Responsividade Mobile */
+/* ================= RESPONSIVIDADE ================= */
 @media (max-width: 900px) {
     .split-layout, .split-layout.reverse {
         grid-template-columns: 1fr; /* Vira uma coluna só */
@@ -527,4 +516,255 @@ header {
     .product-image-container {
         margin-top: 30px;
     }
+}
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    .grid-testemunho {
+        grid-template-columns: 1fr;
+    }
+    .stats-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+/* ================= PÁGINA ASSISTÊNCIA TÉCNICA ================= */
+
+/* Hero Específico de Suporte (Usa 'Tecnico.jpg') */
+.support-hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('Tecnico.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.support-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.support-hero p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-outline-light {
+    border: 2px solid white;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Barra de Estatísticas */
+.stats-bar {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 25px 0;
+    margin-top: -5px; /* Cola no hero */
+}
+
+.stats-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat-item {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-item i {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+/* Grid de Serviços */
+.services-grid-section {
+    padding: 80px 0;
+}
+
+.section-title-center {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title-center h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+}
+
+.grid-3-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: var(--accent-color);
+}
+
+/* Destaque para o card do meio */
+.highlight-card {
+    border-top: 5px solid var(--accent-color);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #f1f5f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.card-list {
+    text-align: left;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
+}
+
+.card-list li {
+    margin-bottom: 8px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.card-list li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+}
+
+/* Marcas / Especialidades */
+.brands-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.brands-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+    opacity: 0.6;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+}
+
+/* CTA Formulário Final */
+.support-cta {
+    background-color: var(--bg-light);
+    padding: 80px 0;
+}
+
+.contact-methods {
+    margin-top: 30px;
+}
+
+.contact-methods .method {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.cta-form-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.cta-form-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+.cta-form-box input, .cta-form-box textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.cta-form-box textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* FOOTER */
+.container.footer-content {
+    padding: 20px 0;
+    text-align: center;
 }

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistência Técnica | PrintCon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container nav-flex">
+            <div class="logo">Print<span>con</span></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="equipamentos.html">Equipamentos</a>
+                <a href="assistenciatecnica.html" style="color: var(--accent-color);">Assistência Técnica</a>
+            </div>
+            <a href="#chamado" class="btn-header">Abrir Chamado</a>
+        </nav>
+    </header>
+
+    <section class="support-hero">
+        <div class="container">
+            <div class="support-hero-content">
+                <h1>Sua operação não pode parar.</h1>
+                <p>Assistência técnica especializada multimarcas. Técnicos certificados, peças originais e o SLA mais rápido da região.</p>
+                <div class="hero-buttons">
+                    <a href="#chamado" class="btn-primary">Abrir Chamado Agora</a>
+                    <a href="#como-funciona" class="btn-outline-light">Como funciona?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="container stats-flex">
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <span>Atendimento em até <strong>4h</strong></span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-tools"></i>
+                <span>Peças <strong>Genuínas</strong></span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-certificate"></i>
+                <span>Técnicos <strong>Certificados</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-grid-section" id="como-funciona">
+        <div class="container">
+            <div class="section-title-center">
+                <h2>O que nós resolvemos?</h2>
+                <p>Do reparo pontual à gestão completa do seu parque de impressão.</p>
+            </div>
+
+            <div class="grid-3-col">
+                <div class="service-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Manutenção Corretiva</h3>
+                    <p>Sua impressora parou? Nossa equipe volante vai até sua empresa para diagnósticos precisos e reparos imediatos.</p>
+                    <ul class="card-list">
+                        <li>Diagnóstico in-loco</li>
+                        <li>Troca de peças desgastadas</li>
+                        <li>Limpeza técnica profunda</li>
+                    </ul>
+                </div>
+
+                <div class="service-card highlight-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Manutenção Preventiva</h3>
+                    <p>A melhor forma de economizar. Agendamos visitas periódicas para evitar que o equipamento quebre no meio do trabalho.</p>
+                    <ul class="card-list">
+                        <li>Aumenta vida útil da máquina</li>
+                        <li>Calibragem de cores</li>
+                        <li>Atualização de Firmware</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <h3>Laboratório Próprio</h3>
+                    <p>Para casos complexos, possuímos laboratório avançado para reparo de placas lógicas, fusores e cabeças de impressão.</p>
+                    <ul class="card-list">
+                        <li>Reparo eletrônico avançado</li>
+                        <li>Testes de estresse</li>
+                        <li>Orçamento sem compromisso</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands-section bg-alt">
+        <div class="container">
+            <h3>Somos especialistas nas principais plataformas</h3>
+            <div class="brands-grid">
+                <span class="brand-name">HP</span>
+                <span class="brand-name">Samsung</span>
+                <span class="brand-name">Ricoh</span>
+                <span class="brand-name">Canon</span>
+                <span class="brand-name">Epson</span>
+                <span class="brand-name">Konica Minolta</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="support-cta" id="chamado">
+        <div class="container split-layout">
+            <div class="cta-text">
+                <h2>Precisa de um técnico urgente?</h2>
+                <p>Preencha o formulário ou chame no WhatsApp.</p>
+                
+                <div class="contact-methods">
+                    <div class="method">
+                        <i class="fab fa-whatsapp"></i>
+                        <strong>(49) 99112-3306</strong>
+                    </div>
+                    <div class="method">
+                        <i class="fas fa-envelope"></i>
+                        <strong>suporte.printcon@gmail.com.br</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-form-box">
+                <form onsubmit="enviarParaWhatsApp(event)">
+                    <label for="nome_cliente">Seu Nome / Empresa</label>
+                    <input type="text" id="nome_cliente" placeholder="Ex: João - Empresa X" required>
+                    
+                    <label for="modelo_maq">Modelo da Impressora</label>
+                    <input type="text" id="modelo_maq" placeholder="Ex: HP M404dw">
+                    
+                    <label for="desc_problema">Qual o problema?</label>
+                    <textarea id="desc_problema" placeholder="Ex: Papel atolando, mancha na folha, não liga..." required></textarea>
+                    
+                    <button type="submit" class="btn-primary full-width">
+                        <i class="fab fa-whatsapp"></i> Solicitar Visita Técnica
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Print<span>con</span></div>
+            <p class="footer-copy">&copy; 2024 PrintCon. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
